@@ -11,8 +11,9 @@ const mySubButton = document.getElementById('subtractButton');
 
 // skriv din eventhandler kode her ---------------------------------------
 
-
-
+/* Student's note: this eventhandler code plus the teacher's code for named functions creates a "callback." */
+myAddButton.addEventListener('click', addValue);
+mySubButton.addEventListener('click', subtractValue);
 
 //-------------------------------------------------------------------------
 
@@ -50,8 +51,10 @@ const diceButton = document.getElementById('rollDiceOne');
 
 // skriv din eventhandler kode her ---------------------------------------
 
-
-
+diceButton.addEventListener('click', ()=> {
+    let diceRoll = getRandomNumber(1, 6);
+    showResult(diceRoll, myDiceRes);
+  });
 
 //-------------------------------------------------------------------------
 
@@ -66,12 +69,15 @@ const diceButton = document.getElementById('rollDiceOne');
 /* opgave 3 key event */
 
 const myLiveText = document.getElementById('myLiveText');
-let myLiveTextResult = document.getElementById('tasteResult');
+let myLiveTextResult = document.getElementById('typedResult');
 
 // skriv din eventhandler kode her ---------------------------------------
 
+/* Student's note: myLiveText is id of the input element; typedResult is the id of the h3 above. */
 
-
+myLiveText.addEventListener('keyup', function() {
+    showResult(myLiveText.value, myLiveTextResult);
+});
 
 //-------------------------------------------------------------------------
 
