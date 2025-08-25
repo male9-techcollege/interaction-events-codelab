@@ -1,36 +1,39 @@
 
 
 /*opgave 1 plus minus*/
-let myButtonValue = 0;
+let myButtonValueByMariePierreLessard = 0;
 //feltet der vises resultat i
 
-const myButtonResult = document.getElementById('buttonResult');
-const myAddButton = document.getElementById('addButton');
-const mySubButton = document.getElementById('subtractButton');
+/* addButton and subtractButton are the + and - buttons, and buttonResult is the h4 text that gets replaced  */
+const myButtonResultByMariePierreLessard = document.getElementById('buttonResult');
+const myAddButtonByMariePierreLessard = document.getElementById('addButton');
+const mySubButtonByMariePierreLessard = document.getElementById('subtractButton');
 
 
 // skriv din eventhandler kode her ---------------------------------------
 
-/* Student's note: this eventhandler code plus the teacher's code for named functions creates a "callback." */
-myAddButton.addEventListener('click', addValue);
-mySubButton.addEventListener('click', subtractValue);
+/* Student's note: this event-handler code plus the teacher's code for named functions creates a "callback." */
+myAddButtonByMariePierreLessard.addEventListener('click', addValue);
+mySubButtonByMariePierreLessard.addEventListener('click', subtractValue);
 
 //-------------------------------------------------------------------------
 
 // named functions du kan kalde fra eventhandlers
+/* In showResult('værdi: ' + myButtonValue, myButtonResult), myButtonResult is the element in which the result is shown. 
+The result takes the form of the text værdi: followed by the equation's result (showResult = what, where). */
 function subtractValue() {
  
-    myButtonValue = myButtonValue - 1;
+    myButtonValueByMariePierreLessard = myButtonValueByMariePierreLessard - 1;
 
-    showResult('værdi: ' + myButtonValue, myButtonResult)
+    showResult('værdi: ' + myButtonValueByMariePierreLessard, myButtonResultByMariePierreLessard)
 }
 
 
 function addValue() {
  
-    myButtonValue = myButtonValue + 1;
+    myButtonValueByMariePierreLessard = myButtonValueByMariePierreLessard + 1;
 
-    showResult('værdi: ' + myButtonValue, myButtonResult)
+    showResult('værdi: ' + myButtonValueByMariePierreLessard, myButtonResultByMariePierreLessard)
 }
 
 
@@ -39,8 +42,9 @@ function addValue() {
 
 
 /* opgave 2 dice*/
-const myDiceRes = document.getElementById('diceResult');
-const diceButton = document.getElementById('rollDiceOne');
+/* diceResult is the h3 where the result gets shown; rollDiceOne is the button */
+const myDiceResByMariePierreLessard = document.getElementById('diceResult');
+const diceButtonByMariePierreLessard = document.getElementById('rollDiceOne');
 
 
 
@@ -51,9 +55,10 @@ const diceButton = document.getElementById('rollDiceOne');
 
 // skriv din eventhandler kode her ---------------------------------------
 
-diceButton.addEventListener('click', ()=> {
-    let diceRoll = getRandomNumber(1, 6);
-    showResult(diceRoll, myDiceRes);
+diceButtonByMariePierreLessard.addEventListener('click', ()=> {
+    let diceRollByMariePierreLessard = getRandomNumber(1, 6);
+    /* diceRoll is the variable that corresponds to a random number, and myDiceRes is the element where the result gets displayed */
+    showResult(diceRollByMariePierreLessard, myDiceResByMariePierreLessard);
   });
 
 //-------------------------------------------------------------------------
@@ -68,15 +73,16 @@ diceButton.addEventListener('click', ()=> {
 
 /* opgave 3 key event */
 
-const myLiveText = document.getElementById('myLiveText');
-let myLiveTextResult = document.getElementById('typedResult');
+/* myLiveText is the input element, and typedResult is the h3 text that gets replaced  */
+const myLiveTextByMariePierreLessard = document.getElementById('myLiveText');
+let myLiveTextResultByMariePierreLessard = document.getElementById('typedResult');
 
 // skriv din eventhandler kode her ---------------------------------------
 
-/* Student's note: myLiveText is id of the input element; typedResult is the id of the h3 above. */
+/* Student's note: myLiveText is the input element; myLiveTextResult is the id of the h3 above. */
 
-myLiveText.addEventListener('keyup', function() {
-    showResult(myLiveText.value, myLiveTextResult);
+myLiveTextByMariePierreLessard.addEventListener('keyup', function() {
+    showResult(myLiveTextByMariePierreLessard.value, myLiveTextResultByMariePierreLessard);
 });
 
 //-------------------------------------------------------------------------
